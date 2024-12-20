@@ -1,3 +1,4 @@
+import About from "./components/About";
 import LandingPage from "./components/LandingPage";
 import { Marquee } from "./components/marquee";
 import NavBar from "./components/NavBar";
@@ -8,6 +9,7 @@ export default function App() {
       <NavBar />
       <LandingPage />
       <Marquee />
+      <About />
     </div>
   );
 }
