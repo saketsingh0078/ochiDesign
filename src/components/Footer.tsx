@@ -1,10 +1,67 @@
-import { motion } from "framer-motion";
-
-function NavBar() {
+const Footer = () => {
   return (
-    <div className=" fixed z-[999] w-full pt-1 backdrop-blur-lg">
-      <div className="m-4 flex items-center">
-        <div className="w-[20%] pl-10">
+    <div className="w-full min-h-screen px-[3vw] pt-[4vw] ">
+      <div className="flex w-full ">
+        <div className="w-1/2">
+          <h1 className="text-[8vw] tracking-tighter leading-[6vw] font-bold uppercase">
+            eye- opening
+          </h1>
+        </div>
+        <div className="flex flex-col w-1/2">
+          <h1 className="text-[6vw] tracking-tighter font-bold uppercase">
+            presentations
+          </h1>
+          <div>
+            <h1 className=" py-[1vw] text-[1.2vw] font-light">S :</h1>
+            {["Instagram", "Behance", "Facebook", "Linkedin"].map(
+              (item, index) => (
+                <h2 key={index} className="text-[1.2vw] font-light">
+                  {item}
+                </h2>
+              )
+            )}
+          </div>
+          <div className="flex justify-between">
+            <div>
+              <h1 className="py-[1vw] text-[1.2vw] font-light">L :</h1>
+              {[
+                "202-1965 W 4th Ave Vancouver, Canada ",
+                "30 Chukarina St Lviv, Ukraine",
+              ].map((item, index) => (
+                <h2
+                  key={index}
+                  className="w-[60%] text-[1.2vw] font-light py-[0.7vw]"
+                >
+                  {item}
+                </h2>
+              ))}
+            </div>
+
+            <div>
+              <h1 className="py-[1vw] text-[1.2vw] font-light">M :</h1>
+              {[
+                "Home",
+                "Services",
+                "Our work",
+                "About us",
+                "Insights",
+                "Contact us",
+              ].map((item, index) => (
+                <h2 key={index} className="text-[1.2vw] font-light">
+                  {item}
+                </h2>
+              ))}
+            </div>
+          </div>
+          <div>
+            <h1 className="py-[1vw] text-[1.2vw] font-light">E:</h1>
+            <h2 className="text-[1.2vw] font-light">hello@ochi.design</h2>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex w-full py-[2vw] items-center tracking-tighter">
+        <div className="w-1/2">
           <svg
             width="72"
             height="30"
@@ -34,35 +91,15 @@ function NavBar() {
             ></path>
           </svg>
         </div>
-        <div className="flex w-[55%] gap-6 items-center justify-end ">
-          {["Services", "Our Work", "About us", "Insights"].map(
-            (item, index) => (
-              <motion.h1
-                whileHover={{
-                  borderBottom: "2px solid #FF5733",
-                }}
-                key={index}
-                className="font-light text-lg capitalize cursor-pointer border-b-[2px]"
-              >
-                {item}
-              </motion.h1>
-            )
-          )}
-        </div>
-
-        <div className="flex w-[30%] items-center justify-end pr-10 font-light text-lg">
-          <motion.h1
-            whileHover={{
-              borderBottom: "2px solid #FF5733",
-            }}
-            className="cursor-pointer"
-          >
-            Contacts
-          </motion.h1>
+        <div className="w-1/2 text-[1.1vw] uppercase flex justify-between items-center">
+          <h1 className="font-light text-gray-500">
+            © ochi design 2024. Legal Terms
+          </h1>
+          <h1 className="font-light text-gray-500">Website by Saket</h1>
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default NavBar;
+export default Footer;

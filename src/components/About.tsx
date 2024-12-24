@@ -45,9 +45,9 @@ const About = () => {
         <div className="w-1/2 pl-[2vw] flex flex-col">
           <h1 className="text-[4vw] font-base">Our approach:</h1>
           <div className="pt-[2vw]">
-            <button className="uppercase flex border-2 border-solid rounded-full  px-[1vw] py-[1vw] items-center justify-center gap-4">
+            <button className="uppercase flex border-2 border-solid border-[#000] bg-black text-[#fff] rounded-full  px-[1.5vw] py-[1vw] items-center justify-center gap-4 hover:opacity-90">
               Read more
-              <div className="w-[1vw] h-[1vw] bg-[#fff] rounded-full">
+              <div className="w-[vw] h-[1vw]  rounded-full">
                 <span className="">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -55,7 +55,7 @@ const About = () => {
                     viewBox="0 0 24 24"
                     strokeWidth="1.5"
                     stroke="currentColor"
-                    className="size-0 "
+                    className="size-4 "
                   >
                     <path
                       strokeLinecap="round"
@@ -68,9 +68,9 @@ const About = () => {
             </button>
           </div>
         </div>
-        <div className="w-1/2 h-[80vh] p-[2vw]">
+        <div className="w-1/2 h-[80vh] p-[2vw] hover:scale-95">
           <img
-            className="w-full h-full rounded-xl "
+            className="w-full h-full rounded-xl"
             src="https://ochi.design/wp-content/uploads/2022/05/Homepage-Photo-663x469.jpg"
             alt="image"
           />

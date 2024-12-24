@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 function LandingPage() {
   return (
     <div className="">
@@ -8,7 +10,21 @@ function LandingPage() {
 
         <div className="masker">
           <div className="flex ">
-            <div className="bg-red-500 w-[10vw] h-[6vw]"></div>
+            <motion.div
+              initial={{ width: "0" }}
+              animate={{ width: "10vw" }}
+              transition={{
+                duration: 1,
+                ease: "easeOut",
+              }}
+              className="bg-red-500  h-[5vw] mt-[1vw] mb-[1vw] rounded-sm"
+            >
+              <img
+                className="h-full w-full rounded-sm"
+                src="	https://ochi.design/wp-content/uploads/2022/04/content-image01.jpg"
+                alt=""
+              />
+            </motion.div>
             <h1 className="text-[7vw] font-bold">eye-opening</h1>
           </div>
         </div>
@@ -24,7 +40,7 @@ function LandingPage() {
         <h1>For public and private companies</h1>
         <h1>From the first pitch to IPO</h1>
         <div className="flex gap-2">
-          <button className="uppercase border-2 border-solid border-black px-2 py-1 rounded-full">
+          <button className="uppercase border-2 border-solid border-black px-2 py-1 rounded-full hover:bg-black hover:text-white transition-all duration-300">
             start the project
           </button>
 

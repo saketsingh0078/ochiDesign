@@ -29,7 +29,7 @@ const card = [
 
 const FeaturedPage = () => {
   return (
-    <div className="w-full h-screen ">
+    <div className="w-full min-h-screen ">
       <h1 className="text-[4vw] tracking-tight leading-none px-[3vw] py-[4vw]">
         Featured projects
       </h1>
@@ -48,7 +48,7 @@ const FeaturedPage = () => {
       </div>
 
       <div className="flex justify-center items-center mt-[4vw] pb-[3vw]">
-        <button className="uppercase border-2 border-solid border-black px-[1vw] py-[0.6vw] rounded-full">
+        <button className="uppercase bg-black text-[#fff] border-2 border-solid border-black px-[1vw] py-[0.6vw] rounded-full  hover:bg-white hover:text-black transition-all duration-300">
           View all the Project
         </button>
       </div>

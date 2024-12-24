@@ -16,7 +16,7 @@ const Card = ({ title, image, btnText }: props) => {
         {btnText.map((item, index) => (
           <button
             key={index}
-            className="px-4 py-2 border-[1px] border-solid border-black rounded-full mt-4 uppercase font-light"
+            className="px-4 py-2 border-[1px] border-solid border-black rounded-full mt-4 uppercase font-light  hover:bg-black hover:text-white transition-all duration-300"
           >
             {item}
           </button>
