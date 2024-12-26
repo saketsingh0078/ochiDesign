@@ -1,4 +1,3 @@
-import { useEffect, useRef } from "react";
 import About from "./components/About";
 import Eyes from "./components/Eyes";
 import FeaturedPage from "./components/FeaturedPage";
@@ -7,7 +6,6 @@ import LandingPage from "./components/LandingPage";
 import { Marquee } from "./components/Marquee";
 import NavBar from "./components/NavBar";
 import Playful from "./components/Playful";
-import "locomotive-scroll/dist/locomotive-scroll.css";
 
 export default function App() {
   return (
