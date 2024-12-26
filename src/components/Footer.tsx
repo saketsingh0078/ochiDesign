@@ -1,21 +1,26 @@
 const Footer = () => {
   return (
-    <div className="w-full min-h-screen px-[3vw] pt-[4vw] ">
-      <div className="flex w-full ">
+    <div className="w-full px-[3vw] pt-[4vw] ">
+      <div className="sm:flex w-full ">
         <div className="w-1/2">
-          <h1 className="text-[8vw] tracking-tighter leading-[6vw] font-bold uppercase">
+          <h1 className=" text-[16vw] sm:text-[8vw] tracking-tighter leading-[12vw] sm:leading-[6vw] font-bold uppercase">
             eye- opening
           </h1>
         </div>
-        <div className="flex flex-col w-1/2">
-          <h1 className="text-[6vw] tracking-tighter font-bold uppercase">
+        <div className="flex flex-col w-full sm:w-1/2">
+          <h1 className="text-[10vw] mt-[5vw] sm:mt-0 sm:text-[6vw] tracking-tighter font-bold uppercase">
             presentations
           </h1>
           <div>
-            <h1 className=" py-[1vw] text-[1.2vw] font-light">S :</h1>
+            <h1 className=" py-[1vw] text-[5vw] sm:text-[1.2vw] font-light">
+              S :
+            </h1>
             {["Instagram", "Behance", "Facebook", "Linkedin"].map(
               (item, index) => (
-                <h2 key={index} className="text-[1.2vw] font-light">
+                <h2
+                  key={index}
+                  className="text-[4.5vw] sm:text-[1.2vw] font-light hover:border-b-2 hover:border-[#FF5733] hover:border-solid hover:w-fit hover:cursor-pointer"
+                >
                   {item}
                 </h2>
               )
@@ -23,14 +28,16 @@ const Footer = () => {
           </div>
           <div className="flex justify-between">
             <div>
-              <h1 className="py-[1vw] text-[1.2vw] font-light">L :</h1>
+              <h1 className="py-[1vw] text-[4vw] sm:text-[1.2vw] font-light">
+                L :
+              </h1>
               {[
                 "202-1965 W 4th Ave Vancouver, Canada ",
                 "30 Chukarina St Lviv, Ukraine",
               ].map((item, index) => (
                 <h2
                   key={index}
-                  className="w-[60%] text-[1.2vw] font-light py-[0.7vw]"
+                  className="w-[60%] text-[4.5vw]  sm:text-[1.2vw] font-light py-[0.7vw]"
                 >
                   {item}
                 </h2>
@@ -38,7 +45,9 @@ const Footer = () => {
             </div>
 
             <div>
-              <h1 className="py-[1vw] text-[1.2vw] font-light">M :</h1>
+              <h1 className="py-[1vw] text-[5vw] sm:text-[1.2vw] font-light">
+                M :
+              </h1>
               {[
                 "Home",
                 "Services",
@@ -47,24 +56,30 @@ const Footer = () => {
                 "Insights",
                 "Contact us",
               ].map((item, index) => (
-                <h2 key={index} className="text-[1.2vw] font-light">
+                <h2
+                  key={index}
+                  className="text-[4.5vw] sm:text-[1.2vw] font-light hover:border-b-2 hover:border-[#FF5733] hover:border-solid hover:w-fit hover:cursor-pointer"
+                >
                   {item}
                 </h2>
               ))}
             </div>
           </div>
           <div>
-            <h1 className="py-[1vw] text-[1.2vw] font-light">E:</h1>
-            <h2 className="text-[1.2vw] font-light">hello@ochi.design</h2>
+            <h1 className="py-[1vw] text-[5vw] sm:text-[1.2vw] font-light">
+              E:
+            </h1>
+            <h2 className="text-[5vw] sm:text-[1.2vw] font-light hover:underline hover:cursor-pointer">
+              hello@ochi.design
+            </h2>
           </div>
         </div>
       </div>
 
       <div className="flex w-full py-[2vw] items-center tracking-tighter">
-        <div className="w-1/2">
+        <div className="w-[30%] sm:w-1/2">
           <svg
-            width="72"
-            height="30"
+            className="w-[14vw] sm:w-[72px] h-[12vw] sm:h-[30px]"
             viewBox="0 0 72 30"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -91,7 +106,7 @@ const Footer = () => {
             ></path>
           </svg>
         </div>
-        <div className="w-1/2 text-[1.1vw] uppercase flex justify-between items-center">
+        <div className="w-[70%] sm:w-1/2 text-[2.8vw] sm:text-[1.2vw] uppercase flex justify-between items-center">
           <h1 className="font-light text-gray-500">
             © ochi design 2024. Legal Terms
           </h1>

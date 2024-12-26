@@ -36,9 +36,8 @@ const FeaturedPage = () => {
       <div className="border-b-2 border-[#B2B2B2]"></div>
       <div className="w-full flex flex-wrap px-[3vw] py-[1vw] gap-4">
         {card.map((item, index) => (
-          <div className="w-[49%] flex-shrink-0 h-full">
+          <div key={index} className="w-full lg:w-[49%]  flex-shrink-0 h-full">
             <Card
-              key={index}
               title={item.title}
               image={item.image}
               btnText={item.bntText || []}

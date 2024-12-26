@@ -1,10 +1,41 @@
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 function NavBar() {
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 50) {
+        // Scrolling down
+        setIsVisible(false);
+      } else {
+        // Scrolling up
+        setIsVisible(true);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollY]);
+
   return (
-    <div className=" fixed z-[999] w-full pt-1 backdrop-blur-lg">
+    <motion.div
+      initial={{ y: 0 }}
+      animate={{ y: isVisible ? 0 : "-100%" }}
+      transition={{ duration: 0.3 }}
+      className="fixed z-[999] w-full pt-1 backdrop-blur-lg"
+    >
       <div className="m-4 flex items-center">
-        <div className="w-[20%] pl-10">
+        <div className="md:w-[20%] md:pl-10">
           <svg
             width="72"
             height="30"
@@ -34,7 +65,7 @@ function NavBar() {
             ></path>
           </svg>
         </div>
-        <div className="flex w-[55%] gap-6 items-center justify-end ">
+        <div className="w-[55%] gap-6 items-center justify-end hidden md:flex">
           {["Services", "Our Work", "About us", "Insights"].map(
             (item, index) => (
               <motion.h1
@@ -42,7 +73,7 @@ function NavBar() {
                   borderBottom: "2px solid #FF5733",
                 }}
                 key={index}
-                className="font-light text-lg capitalize cursor-pointer border-b-[2px]"
+                className="font-light text-lg capitalize cursor-pointer"
               >
                 {item}
               </motion.h1>
@@ -50,7 +81,7 @@ function NavBar() {
           )}
         </div>
 
-        <div className="flex w-[30%] items-center justify-end pr-10 font-light text-lg">
+        <div className=" w-[30%] items-center justify-end pr-10 font-light text-lg hidden md:flex">
           <motion.h1
             whileHover={{
               borderBottom: "2px solid #FF5733",
@@ -61,7 +92,7 @@ function NavBar() {
           </motion.h1>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

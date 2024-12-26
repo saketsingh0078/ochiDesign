@@ -7,30 +7,11 @@ import LandingPage from "./components/LandingPage";
 import { Marquee } from "./components/Marquee";
 import NavBar from "./components/NavBar";
 import Playful from "./components/Playful";
-import LocomotiveScroll from "locomotive-scroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 
 export default function App() {
-  const scrollRef = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => {
-    let locoScroll: LocomotiveScroll | undefined;
-
-    if (scrollRef.current) {
-      locoScroll = new LocomotiveScroll({
-        el: scrollRef.current,
-        smooth: true,
-      });
-    }
-
-    // Cleanup to avoid memory leaks
-    return () => {
-      if (locoScroll) locoScroll.destroy();
-    };
-  }, []);
-
   return (
-    <div className="w-full min-h-screen bg-[#F1F1F1]">
+    <div className="w-full min-h-screen bg-[#F1F1F1] main">
       <NavBar />
       <LandingPage />
       <Marquee />
